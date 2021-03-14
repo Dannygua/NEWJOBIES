@@ -1,0 +1,46 @@
+<div class="movies" >
+    <div>
+      <h2>Peliculas</h2>
+    </div>
+  <br/>
+  
+    <div class=" card-container">
+      <a *ngFor="let c of categorias">
+        <div >
+          <div class="card mb-3">
+            <img src="https://as.com/meristation/imagenes/2020/11/11/noticias/1605088151_378581_1605088347_noticia_normal.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{c.nombre}}</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+
+        </div>
+      
+      </a>
+  
+
+    </div>
+  
+    <br/>
+    <h2>NUEVA PELICULA</h2>
+    <br/>
+      <form class="was-validated" [formGroup]="myFormCategoria" (ngSubmit)="ingresarCategoria()" >
+      <div class="form-group mb-3" > 
+        <input type="text" class="form-control is-invalid" id="validationTextarea" placeholder="Required example textarea" required
+         formControlName="nombreF" > 
+      </div>
+      <div class="invalid-feedback">
+        Please enter a message in the textarea.
+      </div>
+      <br/>
+      <button type="submit" class="btn btn-secondary btn-lg btn-block" >Registrar</button>
+
+    </form>
+
+  
+    <br/>
+    <br/>
+    <br/>
+  </div>
